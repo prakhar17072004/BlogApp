@@ -9,6 +9,7 @@
   transition: 0.3s ease;
   margin: 20px;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 .card:hover {
@@ -37,26 +38,13 @@
   line-height: 1.4;
 }
 
-.card a {
-  display: inline-block;
-  margin-top: 12px;
-  text-decoration: none;
-  background: #6a5af9;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 14px;
-  transition: 0.2s ease;
-}
-
-.card a:hover {
-  background: #5948e6;
-}
+/* Buttons */
 
 .card-actions {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
+  gap: 10px;
 }
 
 /* Read More Button */
@@ -88,4 +76,73 @@
 
 .delete-btn:hover {
   background: #e60000;
+}
+
+
+/* ----------------------------------------------------
+                RESPONSIVE DESIGN
+----------------------------------------------------- */
+
+/* 📱 Extra Small Phones (max-width: 360px) */
+@media (max-width: 360px) {
+
+  .card {
+    width: 90%;        /* Card fits screen */
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  .card img {
+    height: 150px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .read-btn,
+  .delete-btn {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+/* 📱 Small Phones (360px – 480px) */
+@media (min-width: 360px) and (max-width: 480px) {
+  .card {
+    width: 95%;
+    margin: 15px auto;
+  }
+}
+
+/* 📱 Large Phones (480px – 600px) */
+@media (min-width: 480px) and (max-width: 600px) {
+  .card {
+    width: 90%;
+  }
+}
+
+/* 📱 Tablets (600px – 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .card {
+    width: 45%; /* 2 Cards per row */
+  }
+}
+
+/* 💻 Small Laptops (900px – 1200px) */
+@media (min-width: 900px) and (max-width: 1200px) {
+  .card {
+    width: 30%; /* 3 per row */
+  }
+}
+
+/* 🖥 Large Screens */
+@media (min-width: 1200px) {
+  .card {
+    width: 320px; /* fixed but centered */
+  }
 }

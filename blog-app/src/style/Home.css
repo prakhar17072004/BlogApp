@@ -1,12 +1,67 @@
+/* Home Grid (Card Layout) */
 .home-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
+  width: 100%;
   animation: fade 0.7s ease-in;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
+/* Fade Animation */
 @keyframes fade {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------------------------
+     RESPONSIVE BREAKPOINTS
+---------------------------------- */
+
+/* 📱 Small Phones (320px – 480px) */
+@media (max-width: 480px) {
+  .home-grid {
+    grid-template-columns: 1fr;   /* 1 card per row */
+    gap: 18px;
+    padding: 5px;
+  }
+}
+
+/* 📱 Larger Phones (480px – 600px) */
+@media (min-width: 480px) and (max-width: 600px) {
+  .home-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 20px;
+  }
+}
+
+/* 📱 Tablets (600px – 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .home-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+}
+
+/* 💻 Small Laptops (900px – 1200px) */
+@media (min-width: 900px) and (max-width: 1200px) {
+  .home-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+}
+
+/* 🖥 Large Screens */
+@media (min-width: 1200px) {
+  .home-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
 }

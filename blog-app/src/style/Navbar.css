@@ -2,7 +2,7 @@
 
 .navbar {
   width: 100%;
-  padding: 15px 40px;
+  padding: 12px 20px;      /* smaller padding */
   background: #6a5af9;
   color: white;
   display: flex;
@@ -13,31 +13,112 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  overflow: hidden;        /* IMPORTANT FIX */
+  box-sizing: border-box;  /* prevents width overflow */
 }
 
 .nav-logo a {
-  font-size: 24px;
+  font-size: 22px;     /* reduced */
   font-weight: 700;
   color: white;
   text-decoration: none;
-  letter-spacing: 1px;
 }
 
+/* Desktop Menu */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 20px;            /* reduced gap */
 }
 
 .nav-links li a {
   text-decoration: none;
   color: white;
   font-size: 16px;
-  padding: 8px 12px;
+  padding: 6px 10px;    /* reduced padding */
   border-radius: 6px;
   transition: 0.3s;
 }
 
 .nav-links li a:hover {
   background: rgba(255,255,255,0.25);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* ----------------------------------------
+   TABLET & SMALL LAPTOP VIEW (<1024px)
+----------------------------------------- */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 16px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-logo a {
+    font-size: 20px;
+  }
+}
+
+/* ----------------------------------------
+   MOBILE VIEW (<768px)
+----------------------------------------- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: #6a5af9;
+    padding: 20px 0;
+    gap: 18px;
+    text-align: center;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
+
+/* ----------------------------------------
+   EXTRA SMALL PHONES (<480px)
+----------------------------------------- */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 12px;
+  }
+
+  .nav-logo a {
+    font-size: 18px;
+  }
+
+  .nav-links li a {
+    font-size: 14px;
+  }
+
+  .hamburger span {
+    width: 22px;
+  }
 }

@@ -2,12 +2,14 @@
 
 .container {
   max-width: 600px;
+  width: 95%;
   margin: 40px auto;
   padding: 25px;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 h2 {
@@ -34,6 +36,7 @@ textarea {
   border-radius: 8px;
   font-size: 15px;
   transition: 0.3s;
+  box-sizing: border-box;
 }
 
 input:focus,
@@ -71,4 +74,76 @@ button {
 button:hover {
   background: #5948e6;
   box-shadow: 0px 4px 12px rgba(90, 75, 249, 0.4);
+}
+
+
+/* ---------------------------------------
+          RESPONSIVE BREAKPOINTS
+---------------------------------------- */
+
+/* 📱 Extra Small Phones (max-width: 360px) */
+@media (max-width: 360px) {
+  .container {
+    padding: 18px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* 📱 Small Phones (360px – 480px) */
+@media (max-width: 480px) {
+  .container {
+    width: 92%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+/* 📱 Large Phones (480px – 600px) */
+@media (min-width: 480px) and (max-width: 600px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+/* 📱 Tablets (600px – 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .container {
+    max-width: 550px;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+}
+
+/* 💻 Small Laptops (900px – 1200px) */
+@media (min-width: 900px) and (max-width: 1200px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+/* 🖥 Large Screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 650px;
+  }
 }

@@ -3,8 +3,9 @@
 .blog-list-container {
   max-width: 1200px;
   margin: 40px auto;
-  padding: 10px;
+  padding: 10px 20px;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 .blog-list-title {
@@ -18,8 +19,9 @@
 /* Dropdown Styling */
 .blog-filter {
   display: block;
-  width: 220px;
-  margin: 0 auto 25px auto;
+  width: 250px;
+  max-width: 90%;
+  margin: 0 auto 30px auto;
   padding: 10px 12px;
   font-size: 16px;
   border-radius: 8px;
@@ -34,10 +36,71 @@
   box-shadow: 0px 0px 8px rgba(106, 90, 249, 0.4);
 }
 
-/* Grid layout for BlogCard */
+/* ---- Responsive Grid layout using CSS Grid ---- */
+
 .blog-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+/* ------------------------------------------
+    RESPONSIVE DESIGN BREAKPOINTS
+------------------------------------------- */
+
+/* 📱 Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .blog-list-title {
+    font-size: 24px;
+  }
+
+  .blog-filter {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+/* 📱 Large Phones (480px – 600px) */
+@media (min-width: 480px) and (max-width: 600px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* 📱 Tablets (600px – 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+}
+
+/* 💻 Small Laptops (900px – 1200px) */
+@media (min-width: 900px) and (max-width: 1200px) {
+  .blog-list-title {
+    font-size: 30px;
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 🖥 Large Screens (1200px+) */
+@media (min-width: 1200px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
 }
