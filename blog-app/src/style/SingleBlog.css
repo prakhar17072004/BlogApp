@@ -1,0 +1,138 @@
+/* ---- Single Blog Page Styling (Premium Modern UI) ---- */
+
+body {
+  background: linear-gradient(135deg, #f7f7ff, #eef2ff);
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Blog container */
+.single-blog-container {
+  max-width: 900px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Title */
+.single-blog-container h2 {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: #222;
+  text-align: center;
+  letter-spacing: 0.6px;
+}
+
+/* Blog image */
+.single-blog-container img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: imageFade 0.8s ease;
+}
+
+.single-blog-container img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.20);
+}
+
+/* Author + Category info */
+.single-blog-info {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  background: #f4f3ff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-bottom: 28px;
+  color: #555;
+  font-size: 18px;
+  font-weight: 500;
+  animation: slideUp 0.6s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+}
+
+/* Mobile responsive fix */
+@media (max-width: 600px) {
+  .single-blog-info {
+    flex-direction: column;
+    gap: 10px;     /* Smaller gap */
+    text-align: center;
+  }
+}
+
+/* Divider */
+.section-divider {
+  width: 90%;
+  margin: 20px auto;
+  border-bottom: 2px solid #ddd;
+  opacity: 0.6;
+  animation: fadeIn 1s;
+}
+
+/* Blog Description */
+.single-blog-description {
+  font-size: 20px;
+  line-height: 1.9;
+  color: #333;
+  padding: 10px;
+  text-align: justify;
+  animation: fadeInText 0.9s ease;
+}
+
+
+/* --- Animations --- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imageFade {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

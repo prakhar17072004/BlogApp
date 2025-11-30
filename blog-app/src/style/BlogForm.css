@@ -1,0 +1,74 @@
+/* ---- Blog Form UI Styling ---- */
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #6a5af9;
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(106, 90, 249, 0.3);
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Error Text */
+p {
+  margin: -10px 0 0;
+  font-size: 14px;
+}
+
+/* Button */
+button {
+  background: #6a5af9;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #5948e6;
+  box-shadow: 0px 4px 12px rgba(90, 75, 249, 0.4);
+}

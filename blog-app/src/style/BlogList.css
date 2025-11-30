@@ -1,0 +1,43 @@
+/* -------- Blog List Page Styling -------- */
+
+.blog-list-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.blog-list-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+/* Dropdown Styling */
+.blog-filter {
+  display: block;
+  width: 220px;
+  margin: 0 auto 25px auto;
+  padding: 10px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #ffffff;
+  transition: 0.3s;
+}
+
+.blog-filter:focus {
+  border-color: #6a5af9;
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(106, 90, 249, 0.4);
+}
+
+/* Grid layout for BlogCard */
+.blog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
